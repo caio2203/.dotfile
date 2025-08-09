@@ -1,0 +1,178 @@
+/* Waybar CSS - Estilo Ghostty Earthsong */
+
+* {
+    font-family: "Adwaita Mono", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(32, 32, 32, 0.8);
+    color: #c5c8c6;
+    transition-property: background-color;
+    transition-duration: .3s;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Reset de todos os botões - estilo minimalista */
+button {
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: #c5c8c6;
+    margin: 0;
+    padding: 0 8px;
+    transition: all 0.2s ease;
+    min-height: 32px;
+}
+
+button:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+    color: #ffffff;
+}
+
+/* Launcher */
+#custom-launcher {
+    font-size: 14px;
+    padding: 0 12px;
+    color: #c5c8c6;
+    margin-left: 4px;
+}
+
+#custom-launcher:hover {
+    color: #ffffff;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+/* Workspaces - Estilo "Balões" SEPARADOS e com TAMANHO UNIFORME */
+#workspaces {
+    background-color: transparent;
+    margin: 0 4px;
+}
+
+#workspaces button {
+    /* --- Definição de Tamanho Único --- */
+    padding: 0 12px;     /* Tamanho horizontal UNIFICADO para todos os estados. */
+    min-width: 20px;     /* Largura mínima UNIFICADA. Ajuste se necessário. */
+    /* ---------------------------------- */
+    
+    margin: 6px 4px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; /* Transição suave */
+
+    /* --- Definição de Cor Padrão --- */
+    color: #969896;
+    background-color: transparent;
+}
+
+#workspaces button:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background-color: #c5c8c6; /* <<<< MUDE A COR DO BALÃO AQUI */
+    color: #1c1c1c;
+
+    /* As propriedades de tamanho (padding, min-width) foram REMOVIDAS daqui
+       para que ele use exatamente o mesmo tamanho do botão normal. */
+}
+
+#workspaces button.urgent {
+    background-color: #cc6666;
+    color: #1c1c1c;
+}
+
+/* Janela ativa */
+#window {
+    margin: 0 12px;
+    padding: 0;
+    color: #c5c8c6;
+    font-weight: normal;
+}
+
+/* Todos os módulos da direita - estilo neutro */
+#tray,
+#network,
+#bluetooth, 
+#pulseaudio,
+#pulseaudio.microphone,
+#battery,
+#custom-power-profiles,
+#custom-updates,
+#clock,
+#custom-notification,
+#custom-power {
+    padding: 0 8px;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: #c5c8c6;
+    font-weight: normal;
+}
+
+/* Hover states neutros */
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#pulseaudio.microphone:hover,
+#battery:hover,
+#custom-power-profiles:hover,
+#custom-updates:hover,
+#clock:hover,
+#custom-notification:hover,
+#custom-power:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+    color: #ffffff;
+}
+
+/* Estados específicos com cores sutis */
+#network.disconnected {
+    color: #cc6666;
+}
+
+#bluetooth.disabled {
+    color: #969896;
+}
+
+#pulseaudio.muted {
+    color: #cc6666;
+}
+
+#battery.charging, #battery.plugged {
+    color: #b5bd68;
+}
+
+#battery.critical:not(.charging) {
+    background-color: rgba(204, 102, 102, 0.3);
+    color: #cc6666;
+    animation: none;
+}
+
+/* Relógio */
+#clock {
+    color: #c5c8c6;
+    font-weight: normal;
+    margin-right: 8px;
+}
+
+/* System tray */
+#tray {
+    margin-right: 4px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
