@@ -12,10 +12,8 @@ choice=$(echo "$options" | wofi --dmenu --prompt "󰉁 Sistema:" --width 250 --h
 
 case "$choice" in
     *"󰍁"*|*"Bloquear"*)
-        # Verificar se swaylock está instalado
-        if command -v swaylock >/dev/null 2>&1; then
-            swaylock
-        elif command -v hyprlock >/dev/null 2>&1; then
+        # Verificar se hyprlock está instalado
+        if command -v hyprlock >/dev/null 2>&1; then
             hyprlock
         else
             notify-send "󰀦 Erro" "Nenhum bloqueador de tela instalado"

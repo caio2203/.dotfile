@@ -1,0 +1,80 @@
+/* Wofi CSS - Tema Ghostty Earthsong */
+
+window {
+    margin: 0px;
+    border: 1px solid rgba(200, 200, 200, 0.2);
+    background-color: rgba(32, 32, 32, 0.95);
+    border-radius: 8px;
+    font-family: "Adwaita Mono", monospace;
+    font-size: 13px;
+}
+
+#input {
+    margin: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    color: #c5c8c6;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 4px;
+    font-family: "Adwaita Mono", monospace;
+}
+
+#input:focus {
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    outline: none;
+}
+
+#inner-box {
+    margin: 8px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+#text {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    color: #c5c8c6;
+    font-weight: normal;
+}
+
+#entry {
+    margin: 2px;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+   border-radius: 4px;
+    color: #c5c8c6;
+}
+
+#entry:selected {
+    background-color: rgba(200, 200, 200, 0.15);
+    color: #ffffff;
+}
+
+#entry:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+#img {
+    margin-right: 8px;
+    padding: 0px;
+    border: none;
+}

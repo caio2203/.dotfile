@@ -60,3 +60,6 @@ alias zen="flatpak run app.zen_browser.zen &"
 
 # GPU-switch
 export PATH="$HOME/bin:$PATH"
+
+# Servidor local
+alias serverl="ssh 192.168.0.125"
