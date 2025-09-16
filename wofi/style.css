@@ -1,80 +1,116 @@
-/* Wofi CSS - Tema Ghostty Earthsong */
-
+/* Janela principal do Wofi */
 window {
     margin: 0px;
-    border: 1px solid rgba(200, 200, 200, 0.2);
-    background-color: rgba(32, 32, 32, 0.95);
-    border-radius: 8px;
-    font-family: "Adwaita Mono", monospace;
-    font-size: 13px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, sans-serif;
+    font-size: 14px;
 }
 
-#input {
-    margin: 8px;
-    padding: 8px 12px;
-    border: 1px solid rgba(200, 200, 200, 0.3);
-    color: #c5c8c6;
-    background-color: rgba(50, 50, 50, 0.8);
-    border-radius: 4px;
-    font-family: "Adwaita Mono", monospace;
-}
-
-#input:focus {
-    border: 1px solid rgba(200, 200, 200, 0.5);
-    outline: none;
+/* Container principal */
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
 }
 
 #inner-box {
-    margin: 8px;
-    padding: 0px;
+    margin: 5px;
     border: none;
     background-color: transparent;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
-#outer-box {
-    margin: 0px;
-    padding: 0px;
+/* Campo de entrada/busca */
+#input {
+    margin: 5px 10px 10px 10px;
     border: none;
-    background-color: transparent;
-    border-radius: 0px;
-}
-
-#scroll {
-    margin: 0px;
-    border: none;
-    background-color: transparent;
-    border-radius: 0px;
-}
-
-#text {
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    color: #c5c8c6;
-    font-weight: normal;
-}
-
-#entry {
-    margin: 2px;
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-   border-radius: 4px;
-    color: #c5c8c6;
-}
-
-#entry:selected {
-    background-color: rgba(200, 200, 200, 0.15);
     color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 500;
+    outline: none;
 }
 
-#entry:hover {
-    background-color: rgba(200, 200, 200, 0.1);
+#input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-#img {
-    margin-right: 8px;
-    padding: 0px;
+/* Lista de resultados */
+#scroll {
+    margin: 0px 10px;
     border: none;
+    background-color: transparent;
+}
+
+/* Container dos itens */
+#inner-box {
+    background-color: transparent;
+}
+
+/* Cada item da lista */
+#entry {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    margin: 3px 0;
+    padding: 8px 12px;
+    font-weight: 500;
+}
+
+/* Item quando passa o mouse por cima */
+#entry:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Item selecionado/focado */
+#entry:selected,
+#entry:focus {
+    background-color: #606060;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Ícone do aplicativo */
+#entry #img {
+    background-color: transparent;
+    margin-right: 8px;
+}
+
+/* Texto do aplicativo */
+#entry #text {
+    color: inherit;
+    background-color: transparent;
+}
+
+/* Scrollbar customizada */
+scrollbar {
+    background-color: transparent;
+    border: none;
+}
+
+scrollbar slider {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+scrollbar slider:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Quando não há resultados */
+#no-results {
+    color: #bf616a;
+    background-color: rgba(191, 97, 106, 0.2);
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px 10px;
+    font-weight: 600;
+    text-align: center;
 }
