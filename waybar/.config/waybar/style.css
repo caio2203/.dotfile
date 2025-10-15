@@ -1,0 +1,151 @@
+/* Reset básico para remover bordas e configurar fonte */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, sans-serif;
+    font-size: 14px;
+    min-height: 0;
+}
+
+/* Configuração da janela principal do Waybar */
+window#waybar {
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    border-radius: 0px;
+    margin: 5px;
+    padding: 0 5px;
+}
+
+/* Estilo base para todos os módulos */
+#workspaces, 
+#clock, 
+#cpu, 
+#memory, 
+#temperature, 
+#bluetooth, 
+#pulseaudio, 
+#battery, 
+#tray, 
+#custom-power {
+    padding: 5px 10px;
+    margin: 3px 2px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 500;
+}
+
+/* Hover effect para módulos */
+#workspaces:hover,
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#battery:hover,
+#tray:hover,
+#custom-power:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Configuração específica para workspaces */
+#workspaces {
+    background: transparent;
+    padding: 0 5px;
+    margin: 3px 5px;
+}
+
+#workspaces button {
+    padding: 4px 8px;
+    margin: 0 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#workspaces button.active {
+    background: #606060;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#workspaces button.urgent {
+    background: #bf616a;
+    color: #ffffff;
+}
+
+/* Estilo especial para o relógio */
+#clock {
+    background: rgba(255, 255, 255, 0.08);
+    font-weight: 600;
+}
+
+/* Configurações específicas para módulos do sistema - backgrounds neutros */
+#cpu,
+#memory,
+#temperature,
+#battery,
+#pulseaudio,
+#bluetooth,
+#tray {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Estados críticos */
+#temperature.critical {
+    color: #bf616a;
+    background: rgba(191, 97, 106, 0.25);
+    font-weight: 600;
+}
+
+#battery.warning {
+    color: #ebcb8b;
+    background: rgba(235, 203, 139, 0.25);
+    font-weight: 600;
+}
+
+#battery.critical {
+    color: #bf616a;
+    background: rgba(191, 97, 106, 0.25);
+    font-weight: 600;
+}
+
+/* Botão de energia com destaque especial */
+#custom-power {
+    background: rgba(191, 97, 106, 0.2);
+    color: #bf616a;
+    font-weight: 600;
+}
+
+#custom-power:hover {
+    background: rgba(191, 97, 106, 0.4);
+    color: #ffffff;
+}
+
+/* Estados específicos da bateria */
+#battery.charging {
+    color: #a3be8c;
+    background: rgba(163, 190, 140, 0.2);
+}
+
+/* Estados do áudio */
+#pulseaudio.muted {
+    color: #bf616a;
+    background: rgba(191, 97, 106, 0.2);
+}
+
+/* Estados do bluetooth */
+#bluetooth.disabled {
+    color: #4c566a;
+    background: rgba(76, 86, 106, 0.2);
+}
+
+#bluetooth.off {
+    color: #4c566a;
+    background: rgba(76, 86, 106, 0.2);
+}
