@@ -1,3 +1,6 @@
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/d475637d-9d5b-48a6-aab4-e8c71bf605f7" />
+
+
 # Dotfiles
 
 Minhas configurações pessoais para Arch Linux + Hyprland, gerenciadas com GNU Stow.
